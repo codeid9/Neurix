@@ -1,7 +1,7 @@
 import Button from "../components/ui/Button";
 function Hero() {
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col p-8 md:flex-row">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col py-8 md:flex-row">
       <div className="flex-1 pt-8 sm:text-start md:flex-8">
         <span className="gradient mb-8 inline-block rounded-4xl px-4 py-3 text-white shadow-xl shadow-black/20">
           ✨ Powered by RAG Technology

@@ -3,7 +3,7 @@ import { features } from "../data/features";
 const Features = () => {
   return (
     <section className="bg-transparent py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-16 text-center">
           <span className="rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-600">

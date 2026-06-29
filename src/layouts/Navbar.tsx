@@ -6,7 +6,7 @@ function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const navLinks = ["Features", "Dashboard", "Pricing", "Testimonials"];
   return (
-    <nav className="sticky top-0 backdrop-blur-md">
+    <nav className="sticky top-0 z-100 backdrop-blur-md">
       <div className="hidden h-16 items-center justify-between border-b border-(--border) px-8 md:flex">
         <div className="flex items-center">
           <BrainCircuitIcon size={32} className="" />
