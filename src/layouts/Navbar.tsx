@@ -7,7 +7,7 @@ function Navbar() {
   const navLinks = ["Features", "Dashboard", "Pricing", "Testimonials"];
   return (
     <nav className="sticky top-0 backdrop-blur-md">
-      <div className="hidden items-center justify-between border-b border-(--border) px-8 py-4 md:flex">
+      <div className="hidden h-16 items-center justify-between border-b border-(--border) px-8 md:flex">
         <div className="flex items-center">
           <BrainCircuitIcon size={32} className="" />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
@@ -28,7 +28,7 @@ function Navbar() {
       </div>
 
       {/* Navbar for small screen  */}
-      <div className="flex h-16 items-center justify-between border-b border-(--border) px-8 md:hidden">
+      <div className="relative z-100 flex h-16 items-center justify-between border-b border-(--border) px-8 md:hidden">
         <div className="flex items-center">
           <BrainCircuitIcon size={32} />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
@@ -44,7 +44,7 @@ function Navbar() {
       </div>
       {/* menu */}
       <div
-        className={`fixed flex h-[calc(100vh-4rem)] w-full flex-col gap-8 bg-(--background) px-4 py-10 sm:px-20 md:hidden ${isNavOpen ? "" : "left-full"}`}
+        className={`fixed z-100 flex h-[calc(100vh-4rem)] w-full flex-col gap-8 bg-(--background) px-4 py-10 sm:px-20 md:hidden ${isNavOpen ? "" : "left-full"}`}
       >
         <ul className="flex flex-col gap-2">
           {navLinks.map((link) => (

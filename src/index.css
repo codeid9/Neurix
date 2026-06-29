@@ -115,9 +115,18 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+.gradient {
+  background: linear-gradient(var(--primary), var(--secondary));
+}
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--foreground) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--foreground) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.06;
 }
