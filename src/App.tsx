@@ -3,7 +3,11 @@ import Dashboard from "./sections/Dashboard";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import HowItWorks from "./sections/HowItWorks";
+import Pricing from "./sections/Pricing";
 import Testimonials from "./sections/Testimonials";
+import Faq from "./sections/Faq";
+import Cta from "./sections/Cta";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -16,7 +20,11 @@ function App() {
         <Dashboard />
         <HowItWorks />
         <Testimonials />
+        <Pricing />
+        <Faq />
+        <Cta />
       </main>
+      <Footer />
     </>
   );
 }
