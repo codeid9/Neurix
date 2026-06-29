@@ -1,8 +1,8 @@
 const Cta = () => {
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden rounded-[40px] bg-gradient-to-r from-violet-600 to-cyan-500 p-12 text-center text-white shadow-2xl md:p-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="overflow-hidden rounded-[40px] bg-linear-to-r from-violet-600 to-cyan-500 p-12 text-center text-white shadow-2xl md:p-20">
           <span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">
             🚀 Get Started Today
           </span>

@@ -4,16 +4,16 @@ import { useState } from "react";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  const navLinks = ["Features", "Dashboard", "Pricing", "Testimonials"];
+  const navLinks = ["Features", "Dashboard", "Testimonials", "Pricing", "Faq"];
   return (
     <nav className="sticky top-0 z-100 backdrop-blur-md">
       <div className="hidden h-16 items-center justify-between border-b border-(--border) px-8 md:flex">
-        <div className="flex items-center">
-          <BrainCircuitIcon size={32} className="" />
+        <a className="flex items-center" href="#Hero">
+          <BrainCircuitIcon size={32} />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
             Neurix
           </h1>
-        </div>
+        </a>
         <ul className="flex gap-2 text-sm">
           {navLinks.map((link) => (
             <li key={link}>
@@ -29,12 +29,12 @@ function Navbar() {
 
       {/* Navbar for small screen  */}
       <div className="relative z-100 flex h-16 items-center justify-between border-b border-(--border) px-8 md:hidden">
-        <div className="flex items-center">
+        <a className="flex items-center" href="#Hero">
           <BrainCircuitIcon size={32} />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
             Neurix
           </h1>
-        </div>
+        </a>
         <div
           onClick={() => setIsNavOpen(!isNavOpen)}
           className="cursor-pointer"
@@ -52,6 +52,7 @@ function Navbar() {
               <a
                 href={`#${link}`}
                 className="block py-4 font-sans text-xl font-light hover:bg-(--muted)"
+                onClick={() => setIsNavOpen(false)}
               >
                 {link}
               </a>

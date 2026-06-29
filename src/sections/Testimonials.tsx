@@ -2,7 +2,7 @@ import { testimonials } from "../data/testimonials";
 
 const Testimonials = () => {
   return (
-    <section className="bg-zinc-50 py-28">
+    <section className="bg-zinc-50 py-28" id="Testimonials">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <span className="rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-600">

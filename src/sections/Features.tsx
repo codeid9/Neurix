@@ -2,7 +2,7 @@ import { features } from "../data/features";
 
 const Features = () => {
   return (
-    <section className="bg-transparent py-28">
+    <section className="bg-transparent py-28" id="Features">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-16 text-center">

@@ -1,6 +1,6 @@
 const Dashboard = () => {
   return (
-    <section className="py-28">
+    <section className="py-28" id="Dashboard">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-16 text-center">
