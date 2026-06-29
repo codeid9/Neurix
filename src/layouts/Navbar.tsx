@@ -44,7 +44,7 @@ function Navbar() {
       </div>
       {/* menu */}
       <div
-        className={`fixed z-100 flex h-[calc(100vh-4rem)] w-full flex-col gap-8 bg-(--background) px-4 py-10 sm:px-20 md:hidden ${isNavOpen ? "" : "left-full"}`}
+        className={`fixed z-100 flex h-[calc(100vh-4rem)] w-full flex-col gap-8 bg-(--background) px-4 py-10 sm:px-20 md:hidden ${isNavOpen ? "" : "left-full hidden"}`}
       >
         <ul className="flex flex-col gap-2">
           {navLinks.map((link) => (
