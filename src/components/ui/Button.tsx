@@ -4,7 +4,7 @@ import { primaryButton, secondaryButton } from "../../lib/styles";
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
-  btnclasses?: "";
+  btnclasses?: string;
 };
 
 function Button({ children, variant = "primary", btnclasses }: ButtonProps) {
