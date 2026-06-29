@@ -1,28 +1,68 @@
-import { BrainCircuitIcon } from "lucide-react";
+import { BrainCircuitIcon, MenuIcon, X } from "lucide-react";
 import Button from "../components/ui/Button";
+import { useState } from "react";
 
 function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const navLinks = ["Features", "Dashboard", "Pricing", "Testimonials"];
   return (
-    <div className="flex items-center justify-between border-b border-white/30 py-4">
-      <div className="flex items-center">
-        <BrainCircuitIcon size={32} className="" />
-        <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
-          Neurix
-        </h1>
+    <nav className="sticky top-0 backdrop-blur-md">
+      <div className="hidden items-center justify-between border-b border-(--border) px-8 py-4 md:flex">
+        <div className="flex items-center">
+          <BrainCircuitIcon size={32} className="" />
+          <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
+            Neurix
+          </h1>
+        </div>
+        <ul className="flex gap-2 text-sm">
+          {navLinks.map((link) => (
+            <li key={link}>
+              <a href={`#${link}`}>{link}</a>
+            </li>
+          ))}
+        </ul>
+        <div className="flex gap-2">
+          <Button>Get Started</Button>
+          <Button variant="secondary">Login</Button>
+        </div>
       </div>
-      <ul className="flex gap-2 text-sm">
-        {navLinks.map((link) => (
-          <li>
-            <a href={`#${link}`}>{link}</a>
-          </li>
-        ))}
-      </ul>
-      <div className="flex gap-2">
-        <Button>Get Started</Button>
-        <Button variant="secondary">Login</Button>
+
+      {/* Navbar for small screen  */}
+      <div className="flex h-16 items-center justify-between border-b border-(--border) px-8 md:hidden">
+        <div className="flex items-center">
+          <BrainCircuitIcon size={32} />
+          <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
+            Neurix
+          </h1>
+        </div>
+        <div
+          onClick={() => setIsNavOpen(!isNavOpen)}
+          className="cursor-pointer"
+        >
+          {isNavOpen ? <X /> : <MenuIcon />}
+        </div>
       </div>
-    </div>
+      {/* menu */}
+      <div
+        className={`fixed flex h-[calc(100vh-4rem)] w-full flex-col gap-8 bg-(--background) px-4 py-10 sm:px-20 md:hidden ${isNavOpen ? "" : "left-full"}`}
+      >
+        <ul className="flex flex-col gap-2">
+          {navLinks.map((link) => (
+            <li key={link} className="">
+              <a
+                href={`#${link}`}
+                className="block py-4 font-sans text-xl font-light hover:bg-(--muted)"
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-col gap-4">
+          <Button btnclasses="py-4">Get Started</Button>
+        </div>
+      </div>
+    </nav>
   );
 }
 

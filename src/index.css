@@ -5,17 +5,109 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Geist", sans-serif;
-  background: #09090b;
-  color: white;
-  overflow-x: hidden;
+:root {
+  /* Base */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+
+  /* Surface */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  /* Primary (Indigo) */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-foreground: #ffffff;
+
+  /* Secondary (Cyan) */
+  --secondary: #06b6d4;
+  --secondary-hover: #0891b2;
+  --secondary-foreground: #ffffff;
+
+  /* Accent */
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-foreground: #ffffff;
+
+  /* Muted */
+  --muted: #e2e8f0;
+  --muted-foreground: #64748b;
+
+  /* Border & Input */
+  --border: #cbd5e1;
+  --input: #e2e8f0;
+  --ring: #6366f1;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  /* Glass */
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+
+  /* Overlay */
+  --overlay: rgba(15, 23, 42, 0.45);
+
+  /* Shadows */
+  --shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
 }
 
-:root {
+.dark {
+  /* Base */
   --background: #09090b;
   --foreground: #ffffff;
+
+  /* Surface */
+  --card: #18181b;
+  --card-foreground: #f8fafc;
+
+  /* Primary */
   --primary: #7c3aed;
+  --primary-hover: #8b5cf6;
+  --primary-foreground: #ffffff;
+
+  /* Secondary */
+  --secondary: #06b6d4;
+  --secondary-hover: #22d3ee;
+  --secondary-foreground: #ffffff;
+
+  /* Accent */
+  --accent: #4f46e5;
+  --accent-hover: #6366f1;
+  --accent-foreground: #ffffff;
+
+  /* Muted */
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+
+  /* Border & Input */
+  --border: #27272a;
+  --input: #18181b;
+  --ring: #8b5cf6;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  /* Glass */
+  --glass: rgba(24, 24, 27, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Overlay */
+  --overlay: rgba(0, 0, 0, 0.6);
+
+  /* Shadows */
+  --shadow: 0 10px 30px rgba(124, 58, 237, 0.25);
+}
+
+body {
+  font-family: "Geist", sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
 }
 
 #root {
