@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../components/ui/Button";
 function Hero() {
   return (
@@ -17,8 +18,12 @@ function Hero() {
           semantic search.
         </p>
         <div className="mb-8 flex flex-col gap-4 py-8 sm:flex-row sm:justify-center">
-          <Button>Get Started Free</Button>
-          <Button variant="secondary">Watch Demo</Button>
+          <Link to="/signup">
+            <Button>Get Started Free</Button>
+          </Link>
+          <Link to="/">
+            <Button variant="secondary">Watch Demo</Button>
+          </Link>
         </div>
       </div>
       <div className="relative mx-auto w-full max-w-lg flex-1">

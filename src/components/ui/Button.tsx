@@ -4,15 +4,15 @@ import { primaryButton, secondaryButton } from "../../lib/styles";
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
-  btnclasses?: string;
+  className?: string;
 };
 
-function Button({ children, variant = "primary", btnclasses }: ButtonProps) {
+function Button({ children, variant = "primary", className }: ButtonProps) {
   return (
     <button
       className={cn(
         variant == "primary" ? primaryButton : secondaryButton,
-        btnclasses,
+        className,
       )}
     >
       {children}

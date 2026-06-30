@@ -1,14 +1,14 @@
-const Dashboard = () => {
+const DashboardPreview = () => {
   return (
     <section className="py-28" id="Dashboard">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-16 text-center">
           <span className="rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-600">
             Dashboard Preview
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-zinc-900">
+          <h2 className="mt-6 text-3xl font-bold text-zinc-900 sm:text-4xl">
             See Neurix in Action
           </h2>
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
         <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-md transition-all duration-150 hover:shadow-2xl">
           <div className="grid lg:grid-cols-[280px_1fr]">
             {/* Sidebar */}
-            <div className="border-r border-zinc-200 bg-zinc-50 p-6">
+            <div className="border-b border-zinc-200 bg-zinc-50 p-6 lg:border-r lg:border-b-0">
               <h3 className="mb-6 text-lg font-semibold">Documents</h3>
 
               <div className="space-y-3">
@@ -45,16 +45,16 @@ const Dashboard = () => {
             </div>
 
             {/* Chat Area */}
-            <div className="p-8">
+            <div className="p-5 sm:p-6 lg:p-8">
               {/* User Message */}
               <div className="mb-6 flex justify-end">
-                <div className="max-w-md rounded-2xl bg-violet-600 px-5 py-4 text-white">
+                <div className="w-fit max-w-[85%] rounded-2xl bg-violet-600 px-4 py-3 text-sm break-words text-white sm:max-w-md sm:px-5 sm:py-4 sm:text-base">
                   What is the refund policy?
                 </div>
               </div>
 
               {/* AI Response */}
-              <div className="max-w-xl rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+              <div className="max-w-full rounded-2xl border border-zinc-200 bg-zinc-50 p-5 sm:max-w-xl">
                 <p className="text-zinc-700">
                   The refund policy allows customers to request a refund within
                   30 days of purchase, provided the service terms are met.
@@ -66,14 +66,14 @@ const Dashboard = () => {
               </div>
 
               {/* Input */}
-              <div className="mt-8 flex items-center gap-3 rounded-2xl border border-zinc-200 p-3">
+              <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-zinc-200 p-3 sm:flex-row sm:items-center">
                 <input
                   type="text"
                   placeholder="Ask a question..."
                   className="flex-1 outline-none"
                 />
 
-                <button className="rounded-xl bg-violet-600 px-5 py-2 text-white transition hover:bg-violet-700">
+                <button className="w-full rounded-xl bg-violet-600 px-5 py-2 text-white transition hover:bg-violet-700 sm:w-auto">
                   Send
                 </button>
               </div>
@@ -85,4 +85,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPreview;
