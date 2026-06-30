@@ -30,12 +30,12 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-100 backdrop-blur-md">
       <div className="hidden h-16 items-center justify-between border-b border-(--border) px-8 md:flex">
-        <Link className="flex items-center" to="/">
+        <a className="flex items-center" href="#Hero">
           <BrainCircuitIcon size={32} />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
             Neurix
           </h1>
-        </Link>
+        </a>
         <ul className="flex gap-2 text-sm">
           {navLinks.map(({ label, href }) => (
             <li key={label}>
@@ -55,12 +55,12 @@ function Navbar() {
 
       {/* Navbar for small screen  */}
       <div className="relative z-100 flex h-16 items-center justify-between border-b border-(--border) px-8 md:hidden">
-        <Link className="flex items-center" to="/">
+        <a className="flex items-center" href="#Hero">
           <BrainCircuitIcon size={32} />
           <h1 className="bg-linear-to-tr from-cyan-400 to-indigo-500 bg-clip-text text-2xl font-extrabold text-transparent">
             Neurix
           </h1>
-        </Link>
+        </a>
         <div
           onClick={() => setIsNavOpen(!isNavOpen)}
           className="cursor-pointer"

@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
 import Button from "../components/ui/Button";
 import { FiArrowLeft } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+  const handleSignup = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    localStorage.setItem("isAuthenticated", "true");
+
+    navigate("/dashboard");
+  };
   return (
     <main className="relative grid min-h-screen lg:grid-cols-2">
       <Link
@@ -36,7 +46,7 @@ const Signup = () => {
 
           <p className="mt-2 text-zinc-500">Start using Neurix today.</p>
 
-          <form className="mt-10 space-y-5">
+          <form onSubmit={handleSignup} className="mt-10 space-y-5">
             <div>
               <label className="mb-2 block text-sm font-medium">
                 Full Name
@@ -69,7 +79,9 @@ const Signup = () => {
               />
             </div>
 
-            <Button className="w-full">Create Account</Button>
+            <Button type="submit" className="w-full">
+              Create Account
+            </Button>
 
             <p className="text-center text-sm text-zinc-500">
               Already have an account?{" "}
