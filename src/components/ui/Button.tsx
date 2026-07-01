@@ -5,7 +5,7 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
-  type?: string;
+  type?: "button" | "submit";
 };
 
 function Button({
