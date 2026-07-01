@@ -15,7 +15,7 @@ const Login = () => {
     navigate("/dashboard");
   };
   return (
-    <main className="grid min-h-screen lg:grid-cols-2">
+    <main className="relative grid min-h-screen lg:grid-cols-2">
       <Link
         to="/"
         className="absolute top-6 left-6 z-10 flex items-center gap-2 text-sm font-medium text-zinc-600 transition hover:text-violet-600 lg:text-white lg:hover:text-white/90"
