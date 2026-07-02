@@ -52,7 +52,7 @@ const Dashboard = () => {
   return (
     <div className="space-y-8">
       {/* Welcome */}
-      <section className="rounded-3xl bg-gradient-to-r from-violet-600 to-cyan-500 p-8 text-white">
+      <section className="rounded-3xl bg-linear-to-r from-violet-600 to-cyan-500 p-8 text-white">
         <p className="text-white/80">Welcome back 👋</p>
 
         <h1 className="mt-2 text-4xl font-bold">Good Morning, Abhay</h1>
